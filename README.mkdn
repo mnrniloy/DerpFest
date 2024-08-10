@@ -13,7 +13,7 @@ To set up your build environment and sync DerpFest, please follow this guide: [L
 **To initialize your local repository using the AOSP/CAF based DerpFest source, use a command like this:**
 
 ```bash
-repo init -u https://github.com/DerpFest-AOSP/manifest.git -b 14
+repo init --depth=1 --git-lfs -u https://github.com/mnrniloy/DerpFest.git -b 14
 ```
 **Sync up with this command:**
 ```bash
@@ -31,11 +31,11 @@ The source at DerpFest is well configured for building.
 ```
 **Prepare your device with:**
 ```bash
-lunch derp_$device-user
+lunch derp_guacamole-user
 ```
 **Then fire it off with:**
 ```bash
-mka derp
+mka derp -j8
 ```
 
 Thanks section
